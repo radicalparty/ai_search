@@ -1,4 +1,2 @@
-struct Pos{//save the position of the point
-    int x, y; 
-    Pos(int x, int y): x(x), y(y) {} 
-};
+#include "Pos.h"
+Pos::Pos(int x, int y) : x(x), y(y) {}

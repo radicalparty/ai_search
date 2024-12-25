@@ -1,5 +1,7 @@
-#include "SolvingMaze/RandomSearch.cpp"
+#include "SolvingMaze/RandomSearch.h"
+#include "SolvingMaze/GreedySearch.h"
 int main(){
-    playGame(0);
+    RandomPlayGame(0);
+    GreedyPlayGame(0);
     return 0;
 }
