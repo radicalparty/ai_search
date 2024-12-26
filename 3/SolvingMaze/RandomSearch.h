@@ -2,7 +2,12 @@
 #define RANDOMSEARCH_H
 #include "../Maze/MazeState.h"
 using State = MazeState;
-int randomAction(const State& state);
-void RandomPlayGame(const int seed);
-
-#endif // RANDOMSEARCH_H
+class RandomSearch{
+private:
+    std::mt19937 mt_for_action;
+public:
+    RandomSearch();
+    int randomAction(const State& state);
+    void RandomPlayGame(const int seed);
+};
+#endif
