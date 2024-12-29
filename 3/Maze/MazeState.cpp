@@ -36,7 +36,7 @@ void MazeState::advance(const int action){//move the point by the action
         this->turn_++;
     }
 
-    std::vector<int> MazeState::legalActions() const{//return the legal actions
+std::vector<int> MazeState::legalActions() const{//return the legal actions
         std::vector<int> actions;
         for(int i = 0; i < 4; i++){
             int nx = this->position.x + dx[i], ny = this->position.y + dy[i];
@@ -45,7 +45,7 @@ void MazeState::advance(const int action){//move the point by the action
             }
         }
         return actions;
-    }
+}
 
 std::string MazeState::toString() const{//return the string of the maze
         std::stringstream ss;
@@ -68,5 +68,9 @@ std::string MazeState::toString() const{//return the string of the maze
 }
 
 void MazeState::evaluateScore(){
-        this->evaluated_score = this->game_score_;
+    this->evaluated_score = this->game_score_;
+}
+
+bool MazeState::operator<(const MazeState& maze_2) const{
+    return this->evaluated_score < maze_2.evaluated_score;
 }

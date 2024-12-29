@@ -8,18 +8,21 @@
 #include "Pos.h"
 
 // Class to represent the state of the maze game
+
+const int dx[4] = {0, 1, 0, -1};
+const int dy[4] = {1, 0, -1, 0};
+
 class MazeState {
 private:
     int64_t evaluated_score = 0;      // Evaluated score for the maze state
     int H, W;                         // Height and width of the maze
     std::vector<std::vector<int>> Maze; // 2D grid representing the maze
     int turn_ = 0, END_TURN;          // Current turn and total turns allowed
-    const int dx[4] = {0, 1, 0, -1};  // Movement in the x-direction
-    const int dy[4] = {1, 0, -1, 0};  // Movement in the y-direction
 
 public:
     Pos position = Pos(0, 0);         // Player's position in the maze
     int game_score_ = 0;              // Game score accumulated
+    int first_action_ = -1;           // the first action selected in root node of search tree
 
     // Default constructor
     MazeState();
@@ -41,6 +44,9 @@ public:
 
     // Evaluate and update the score
     void evaluateScore();
+
+    //compare the MazeState for sorting
+    bool operator<(const MazeState& maze_2) const;
 };
 
 #endif // MAZESTATE_H
