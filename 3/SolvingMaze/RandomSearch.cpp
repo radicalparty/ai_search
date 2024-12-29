@@ -2,14 +2,14 @@
 #include "../Maze/MazeState.h"
 #include "RandomSearch.h"
 
-RandomSearch::RandomSearch(){mt_for_action = std::mt19937(0);}
+std::mt19937 mt_for_action(0);
 //randomly select an action
-int RandomSearch::randomAction(const State& state){
+int randomAction(const State& state){
     auto actions = state.legalActions();
     return actions[mt_for_action() % actions.size()];
 }
 
-void RandomSearch::RandomPlayGame(const int seed){
+void RandomPlayGame(const int seed){
     State state(3, 4, 4, seed);
     std::cout << "Random Action" << "\n";
     while(!state.isDone()){

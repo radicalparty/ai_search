@@ -4,6 +4,7 @@
 using State = MazeState;
 
 int randomAction(const State& state);
+
 void RandomPlayGame(const int seed);
 
 #endif // RANDOMSEARCH_H
