@@ -1,7 +1,10 @@
 #include "../Maze/MazeState.h"
+#include "GreedySearch.h"
 #include <iostream>
 using State = MazeState;
-int greedyAction(const State& state){
+
+GreedySearch::GreedySearch(){}
+int GreedySearch::greedyAction(const State& state){
     auto legal_actions = state.legalActions();
     int64_t max_score = -1e9;
     int best_action = -1;
@@ -16,7 +19,7 @@ int greedyAction(const State& state){
     return best_action;
 }
 
-void GreedyPlayGame(const int seed){
+void GreedySearch::GreedyPlayGame(const int seed){
     State state(3, 4, 4, seed);
     std::cout << "Greedy Action" << "\n";
     while(!state.isDone()){

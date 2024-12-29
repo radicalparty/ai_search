@@ -3,9 +3,11 @@
 
 #include "../Maze/MazeState.h"
 using State = MazeState;
-
-int greedyAction(const State& state);
-
-void GreedyPlayGame(const int seed);
+class GreedySearch{
+public:
+    GreedySearch();
+    int greedyAction(const State& state);
+    void GreedyPlayGame(const int seed);
+};
 
 #endif
