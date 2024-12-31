@@ -45,7 +45,7 @@ public:
     // Evaluate and update the score
     void evaluateScore();
 
-    //compare the MazeState for sorting
+    //compare the Maze for sorting
     bool operator<(const MazeState& maze_2) const;
 };
 
