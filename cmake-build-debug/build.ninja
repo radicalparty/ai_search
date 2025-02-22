@@ -79,6 +79,18 @@ build CMakeFiles/ai_search.dir/5/playGame/minimax.cpp.o: CXX_COMPILER__ai_search
   OBJECT_DIR = CMakeFiles/ai_search.dir
   OBJECT_FILE_DIR = CMakeFiles/ai_search.dir/5/playGame
 
+build CMakeFiles/ai_search.dir/5/playGame/montecarlo.cpp.o: CXX_COMPILER__ai_search_unscanned_Debug /Users/a8888/CLionProjects/ai_search/5/playGame/montecarlo.cpp || cmake_object_order_depends_target_ai_search
+  DEP_FILE = CMakeFiles/ai_search.dir/5/playGame/montecarlo.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/ai_search.dir
+  OBJECT_FILE_DIR = CMakeFiles/ai_search.dir/5/playGame
+
+build CMakeFiles/ai_search.dir/5/playGame/thunder.cpp.o: CXX_COMPILER__ai_search_unscanned_Debug /Users/a8888/CLionProjects/ai_search/5/playGame/thunder.cpp || cmake_object_order_depends_target_ai_search
+  DEP_FILE = CMakeFiles/ai_search.dir/5/playGame/thunder.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/ai_search.dir
+  OBJECT_FILE_DIR = CMakeFiles/ai_search.dir/5/playGame
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ai_search
@@ -87,7 +99,7 @@ build CMakeFiles/ai_search.dir/5/playGame/minimax.cpp.o: CXX_COMPILER__ai_search
 #############################################
 # Link the executable ai_search
 
-build ai_search: CXX_EXECUTABLE_LINKER__ai_search_Debug CMakeFiles/ai_search.dir/main.cpp.o CMakeFiles/ai_search.dir/5/Maze/AlterMazeState.cpp.o CMakeFiles/ai_search.dir/5/Maze/Character.cpp.o CMakeFiles/ai_search.dir/5/playGame/play.cpp.o CMakeFiles/ai_search.dir/5/playGame/minimax.cpp.o
+build ai_search: CXX_EXECUTABLE_LINKER__ai_search_Debug CMakeFiles/ai_search.dir/main.cpp.o CMakeFiles/ai_search.dir/5/Maze/AlterMazeState.cpp.o CMakeFiles/ai_search.dir/5/Maze/Character.cpp.o CMakeFiles/ai_search.dir/5/playGame/play.cpp.o CMakeFiles/ai_search.dir/5/playGame/minimax.cpp.o CMakeFiles/ai_search.dir/5/playGame/montecarlo.cpp.o CMakeFiles/ai_search.dir/5/playGame/thunder.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk
   OBJECT_DIR = CMakeFiles/ai_search.dir
   POST_BUILD = :

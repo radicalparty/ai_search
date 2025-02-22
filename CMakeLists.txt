@@ -12,4 +12,8 @@ add_executable(ai_search main.cpp
         5/playGame/play.h
         5/playGame/minimax.cpp
         5/playGame/minimax.h
+        5/playGame/montecarlo.cpp
+        5/playGame/montecarlo.h
+        5/playGame/thunder.cpp
+        5/playGame/thunder.h
 )

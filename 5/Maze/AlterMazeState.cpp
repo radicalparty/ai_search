@@ -199,3 +199,19 @@ void testFirstPlayerWinRate(const std::array<StringAIPair, 2> &ais, const int ga
     first_player_win_rate /= (double)(game_number * 2);
     cout << "Winning rate of " << ais[0].first << " to " << ais[1].first << ":\t" << first_player_win_rate << endl;
 }
+
+double AlterMazeState::getScoreRate() const {//현재 플레이어 시점에서 게임판을 평가(0~1)
+
+    if (cl[0].game_score_ + cl[1].game_score_ == 0){
+        return 0.;
+    }
+
+    return ((double)cl[0].game_score_) / (double)(cl[0].game_score_ + cl[1].game_score_);
+}
+
+int randomAction(const State &state)
+{
+    auto v = std::mt19937(state.seed);
+    auto legal_actions = state.legalActions();
+    return legal_actions[abs((int)v()) % (legal_actions.size())];
+}

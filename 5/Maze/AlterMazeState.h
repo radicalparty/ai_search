@@ -3,10 +3,11 @@
 #include <vector>
 #include <random>
 #include "Character.h"
+#define INF 1e9
 
-constexpr const int H = 3;
-constexpr const int W = 3;
-constexpr const int END_TURN = 4;
+constexpr const int H = 10;
+constexpr const int W = 10;
+constexpr const int END_TURN = 50;
 
 const int dx[4] = {1, -1, 0, 0};
 const int dy[4] = {0, 0, -1, 1};
@@ -37,12 +38,15 @@ public:
     WinningStatus getWinningStatus() const;
     int64_t getScore() const;
     double getFirstPlayerScoreForWinRate() const;
+    double getScoreRate() const;
 };
 
 using State = AlterMazeState;
 
 using AIFunction = std::function<int(const State &)>;
 using StringAIPair = std::pair<std::string, AIFunction>;
+
+int randomAction(const State& state);
 
 void testFirstPlayerWinRate(const std::array<StringAIPair, 2> &ais, const int game_number);
 

@@ -5,8 +5,6 @@
 
 using State = AlterMazeState;
 
-int randomAction(const State& state);
-
 void playGame(const int seed);
 
 

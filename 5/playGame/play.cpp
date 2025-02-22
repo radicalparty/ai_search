@@ -3,13 +3,6 @@
 
 using State = AlterMazeState;
 
-int randomAction(const State &state)
-{
-    auto v = std::mt19937(state.seed);
-    auto legal_actions = state.legalActions();
-    return legal_actions[abs((int)v()) % (legal_actions.size())];
-}
-
 void playGame(const int seed)
 {
     using std::cout;
